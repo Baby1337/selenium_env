@@ -1,13 +1,15 @@
 import time
-import math
+from math import log, sin
 from selenium import webdriver
 
 
 def calc(x):
-    return str(math.log(abs(12*math.sin(int(x)))))
+	#Функция для подсчета всеми нами любмой функции(сори за тавтологию)
+    return str(log(abs(12*sin(int(x)))))
 
 
 try:
+
     driver = webdriver.Chrome()
 
     driver.get('http://suninjuly.github.io/math.html')
@@ -29,3 +31,4 @@ try:
 finally:
     time.sleep(20)
     driver.quit()
+
